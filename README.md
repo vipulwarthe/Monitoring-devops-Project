@@ -29,6 +29,66 @@
       22  rm alertmanager-0.27.0.linux-amd64.tar.gz 
       23  mv alertmanager-0.27.0.linux-amd64/ alertmanager
       24  ls
+      27  cd prometheus/
+      28  ls
+      29  ./prometheus &
+      30  cd ..
+      31  cd alertmanager/
+      32  ls
+      33  cd ..
+      34  cd prometheus/
+      35  ls
+      36  vi alert_rules.yml
+      37  vi prometheus.yml 
+      38  cd ..
+      39  cd alertmanager/
+      40  ./alertmanager &
+      41  cd ..
+      42  cd prometheus/
+      43  ls
+      44  pgrep prometheus 
+      45  kill 1661
+      46  ./prometheus &
+      47  vi prometheus.yml 
+      48  pgrep prometheus 
+      49  kill 1745
+      50  ./prometheus &
+      51  vi prometheus.yml 
+      52  pgrep prometheus 
+      53  kill 1829
+      54  ./prometheus &
+      55  cd ..
+      56  ls
+      57  cd blackbox_exporter/
+      58  ls
+      59  ./blackbox_exporter &
+      60  vi blackbox.yml 
+      61  cd ..
+      62  ls
+      63  cd prometheus/
+      64  ls
+      65  vi prometheus.yml 
+      66  pgrep prometheus 
+      67  kill 1904
+      68  ./prometheus &
+      69  cd ..
+      70  ls
+      71  cd alertmanager/
+      72  ls
+      73  vi alertmanager.yml 
+      74  ls
+      75  rm alertmanager.yml 
+      76  vi alertmanager.yml
+      77  pgrep alertmanager 
+      78  kill 1712
+      79  ./alertmanager &
+      80  cd ..
+      81  cd prometheus/
+      82  pgrep prometheus 
+      83  kill 2008
+      84  ./prometheus &
+      85  history
+
   
 * On secod app-server run below commads:
 
@@ -59,4 +119,5 @@
       25  cd target/
       26  ls
       27  java -jar database_service_project-0.0.2.jar 
-
+      28  ps
+      29  kill PID of Boardgame application so that alert will send on our email Id.
