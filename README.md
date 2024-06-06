@@ -4,6 +4,7 @@
 * Security Group: SSH-22,HTTP-80,HTTPS-443,custom TCP-3000-10000,custom TCP-587,custom TCP-27017,SMTP-25,SMTPS-465
 
 * Run below commands on Monitor server:
+  
       1  clear
       2  sudo apt update
       3  wget https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.linux-amd64.tar.gz
